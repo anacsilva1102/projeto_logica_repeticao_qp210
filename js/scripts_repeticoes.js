@@ -5,7 +5,20 @@ for(i = 0;i < 10; i++ ){
     console.log(i, 'Amor')
     divFlor.innerHTML += `${i} - Amor <br> `
 }
+
   //CONTADOR/ACUMULADOR
   const inputNum = document.querySelector('#num')
   const btnNUM = document.querySelector('#btn-num')
   const divContAcum = document.querySelector('#div-cont-acum')
+
+let cont = 0
+let acum = 0.0
+
+btnNum.addEventListener('click', (evt))=>{
+    let numDigitado = number(inputNum.value)
+
+    cont++
+    acum += numDigitado
+
+    divContAcum.innerHTML = `TOTAL DE NÚMERO É: ${cont} <br> A SOMA DOS NÚMEROS É: ${acum}`
+}
